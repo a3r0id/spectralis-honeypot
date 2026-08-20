@@ -1,0 +1,10 @@
+.git
+.gitignore
+.gitattributes
+.devcontainer
+.vscode
+build
+out
+scripts
+tests
+**/CMakeUserPresets.json

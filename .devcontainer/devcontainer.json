@@ -1,0 +1,33 @@
+{
+	"name": "S7 PLC Honeypot Development Container",
+	"image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04",
+	"remoteUser": "vscode",
+	"updateRemoteUserUID": false,
+	"forwardPorts": [102],
+	"portsAttributes": {
+		"102": {
+			"label": "S7 ISO-on-TCP",
+			"onAutoForward": "notify"
+		}
+	},
+	"runArgs": [
+		"--cap-add=NET_BIND_SERVICE"
+	],
+	"postCreateCommand": "cmake --preset linux-docker-debug && cmake --build --preset linux-docker-debug && .devcontainer/install-python.sh 3.12",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"KylinIdeTeam.cppdebug"
+			],
+			"settings": {
+				"cmake.useCMakePresets": "always",
+				"cmake.configureOnOpen": true,
+				"cmake.configurePreset": "linux-docker-debug",
+				"cmake.buildPreset": "linux-docker-debug",
+				"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+    "cmake.useCMakePresets": "always",
+    "cmake.configureOnOpen": true,
+    "cmake.configurePreset": "linux-docker-debug",
+    "cmake.buildPreset": "linux-docker-debug",
+    "cmake.buildBeforeRun": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.debugConfig": {
+        "cwd": "${workspaceFolder}",
+        "args": [],
+        "environment": [
+            { "name": "HONEYPOT_PORT", "value": "102" },
+            { "name": "HONEYPOT_BIND_ADDR", "value": "0.0.0.0" },
+            { "name": "HONEYPOT_DEVICE", "value": "S7-200" }
+        ],
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "stopAtEntry": false
+    }
+}

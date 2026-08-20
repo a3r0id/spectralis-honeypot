@@ -1,0 +1,46 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "linux-docker-debug",
+            "displayName": "Linux Docker Debug",
+            "description": "Native Linux debug build for the dev container. binaryDir is under $HOME so configure works when the repo is on a Windows 9p/drvfs mount.",
+            "generator": "Unix Makefiles",
+            "binaryDir": "$env{HOME}/.cache/spectralis-honeypot/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "linux-release",
+            "displayName": "Linux Release",
+            "description": "Native Linux release build. binaryDir is under $HOME so configure works when the repo is on a Windows 9p/drvfs mount.",
+            "generator": "Unix Makefiles",
+            "binaryDir": "$env{HOME}/.cache/spectralis-honeypot/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "linux-docker-debug",
+            "configurePreset": "linux-docker-debug"
+        },
+        {
+            "name": "linux-release",
+            "configurePreset": "linux-release"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+version: '3.8'
+
+networks:
+  honeynet:
+    driver: bridge
+    internal: true
+
+services:
+  s7-honeypot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: s7-honeypot:latest
+    container_name: s7-honeypot
+
+    # Uncomment on a VPS that has gVisor installed:
+    # runtime: runsc
+
+    ports:
+      - "102:102"
+
+    environment:
+      - HONEYPOT_PORT=102
+      - HONEYPOT_BIND_ADDR=0.0.0.0
+      - HONEYPOT_DEVICE=S7-200
+
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+
+    networks:
+      - honeynet
+    restart: always
