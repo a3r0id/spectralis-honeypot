@@ -76,6 +76,14 @@ Examples:
 5:  "M340" - Modicon M340 PLC
 ```
 
+### Spectralis Viewer
+
+The viewer is a simple Vite app that loads, enumerates and extrapolates captured transactions.
+[github.com/a3r0id/spectralis-viewer](https://github.com/a3r0id/spectralis-viewer)
+
+<img width="1291" height="649" alt="image" src="https://github.com/user-attachments/assets/e05498db-90b1-4bf5-809f-c3692711561d" />
+
+
 ### Environment variables
 
 CLI arguments override these.
