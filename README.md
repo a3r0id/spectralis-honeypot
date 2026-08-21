@@ -81,6 +81,8 @@ Examples:
 The viewer is a simple Vite app that loads, enumerates and extrapolates captured transactions.
 [github.com/a3r0id/spectralis-viewer](https://github.com/a3r0id/spectralis-viewer)
 
+<img width="1668" height="1112" alt="image" src="https://github.com/user-attachments/assets/c02c8ebd-a1c2-4e57-8811-2769022d4670" />
+
 <img width="1291" height="649" alt="image" src="https://github.com/user-attachments/assets/e05498db-90b1-4bf5-809f-c3692711561d" />
 
 
