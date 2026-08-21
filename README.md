@@ -1,7 +1,6 @@
 # Spectralis Honeypot
 
-A modular, medium-interactivity industrial PLC honeypot. 
-Spectralis listens on a TCP port, handles multiple common PLC L4-L7 protocols and completes enough of the handshake for scanners and clients to stick around, while recording every session to disk.
+Spectralis is a modular, medium‑interaction industrial PLC honeypot. It listens on a TCP port, supports multiple common L4-L7 PLC protocols, and completes enough of each handshake to keep scanners and clients bound while recording every session to disk.
 
 More mock devices coming soon™.
 
@@ -169,6 +168,24 @@ ctest --test-dir "$HOME/.cache/spectralis-honeypot/build/linux-docker-debug" --o
 A VS Code / Cursor [devcontainer](.devcontainer/) is included for a ready Linux toolchain.
 
 ---
+
+# Session File Format
+
+```cpp
+struct SessionHeader {
+    time_t timestamp;
+    in_addr ip;
+    in_port_t port;
+    uint16_t protocol;
+};
+
+struct SessionEntry {
+    time_t timestamp;
+    in_addr ip;
+    uint16_t length;
+    const uint8_t* payload;
+};
+```
 
 ## License
 
