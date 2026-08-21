@@ -1,12 +1,8 @@
-# Spectralis Honeypot
+# Spectralis PLC Honeypot
 
-Modular industrial PLC honeypot. It listens on a TCP port, pretends to be a Siemens or Modicon PLC, completes enough of the handshake for scanners and clients to stick around, and records every session to disk.
+Spectralis is a modular, medium‑interaction industrial PLC honeypot. It listens on a TCP port, supports multiple common L4-L7 PLC protocols, and completes enough of each handshake to keep scanners and clients bound while recording every session to disk.
 
 More mock devices coming soon™.
-
-**Repo:** [github.com/a3r0id/spectralis-honeypot](https://github.com/a3r0id/spectralis-honeypot)
-
-> Use only on systems and networks you own or have explicit permission to monitor. This is a research / defensive tool, not a toy to drop on someone else’s LAN.
 
 ---
 
@@ -79,6 +75,16 @@ Examples:
 4:  "M221" - Modicon PLC model
 5:  "M340" - Modicon M340 PLC
 ```
+
+### Spectralis Viewer
+
+The viewer is a simple Vite app that loads, enumerates and extrapolates captured transactions.
+[github.com/a3r0id/spectralis-viewer](https://github.com/a3r0id/spectralis-viewer)
+
+<img width="1668" height="1112" alt="image" src="https://github.com/user-attachments/assets/c02c8ebd-a1c2-4e57-8811-2769022d4670" />
+
+<img width="1291" height="649" alt="image" src="https://github.com/user-attachments/assets/e05498db-90b1-4bf5-809f-c3692711561d" />
+
 
 ### Environment variables
 
@@ -173,6 +179,24 @@ A VS Code / Cursor [devcontainer](.devcontainer/) is included for a ready Linux 
 
 ---
 
+# Session File Format
+
+```cpp
+struct SessionHeader {
+    time_t timestamp;
+    in_addr ip;
+    in_port_t port;
+    uint16_t protocol;
+};
+
+struct SessionEntry {
+    time_t timestamp;
+    in_addr ip;
+    uint16_t length;
+    const uint8_t* payload;
+};
+```
+
 ## License
 
-[MIT](LICENSE) © 2026 hostinfodev
+[MIT](LICENSE) © 2026 a3r0id
