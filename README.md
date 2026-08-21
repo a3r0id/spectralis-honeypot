@@ -1,6 +1,7 @@
 # Spectralis Honeypot
 
-Modular industrial PLC honeypot. It listens on a TCP port, pretends to be a Siemens or Modicon PLC, completes enough of the handshake for scanners and clients to stick around, and records every session to disk.
+A modular, medium-interactivity industrial PLC honeypot. 
+Spectralis listens on a TCP port, handles multiple common PLC L4-L7 protocols and completes enough of the handshake for scanners and clients to stick around, while recording every session to disk.
 
 More mock devices coming soon™.
 
