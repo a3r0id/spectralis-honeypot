@@ -1,4 +1,4 @@
-# Spectralis Honeypot
+# Spectralis PLC Honeypot
 
 Spectralis is a modular, medium‑interaction industrial PLC honeypot. It listens on a TCP port, supports multiple common L4-L7 PLC protocols, and completes enough of each handshake to keep scanners and clients bound while recording every session to disk.
 
