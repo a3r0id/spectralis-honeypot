@@ -132,10 +132,10 @@ public:
     }
 };
 
-}  // namespace
+}
 
 std::shared_ptr<ProtocolHandler> make_modbus_tcp_protocol() {
     return std::make_shared<ModbusTcpProtocol>();
 }
 
-}  // namespace honeypot
+}

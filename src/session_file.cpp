@@ -29,4 +29,4 @@ void write_session_entry(const std::string& filepath, const SessionEntry& entry)
     file.close();
 }
 
-}  // namespace honeypot
+}

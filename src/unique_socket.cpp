@@ -31,4 +31,4 @@ int UniqueSocket::get() const {
     return fd_;
 }
 
-}  // namespace honeypot
+}

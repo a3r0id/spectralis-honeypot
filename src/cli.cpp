@@ -25,7 +25,7 @@ std::string default_device_from_env() {
     return env_or("HONEYPOT_PLC_TYPE", "S7-200");
 }
 
-}  // namespace
+}
 
 void print_usage() {
     std::cerr
@@ -77,4 +77,4 @@ Args parse_args(int argc, char** argv) {
     return parsed;
 }
 
-}  // namespace honeypot
+}

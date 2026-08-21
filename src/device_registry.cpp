@@ -16,7 +16,7 @@ std::string to_lower(std::string value) {
     return value;
 }
 
-}  // namespace
+}
 
 DeviceRegistry& DeviceRegistry::instance() {
     static DeviceRegistry registry;
@@ -66,4 +66,4 @@ void print_device_list(std::ostream& out) {
     }
 }
 
-}  // namespace honeypot
+}

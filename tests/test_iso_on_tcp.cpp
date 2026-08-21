@@ -24,7 +24,7 @@ const std::vector<uint8_t> kCotpCr = {
     0xC0, 0x01, 0x0A,
 };
 
-}  // namespace
+}
 
 TEST(IsoOnTcp, DetectsTpkt) {
     EXPECT_TRUE(is_tpkt(kCotpCr.data(), kCotpCr.size()));

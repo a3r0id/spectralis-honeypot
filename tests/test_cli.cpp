@@ -17,7 +17,7 @@ void clear_honeypot_env() {
     unsetenv("HONEYPOT_DEVICE");
 }
 
-}  // namespace
+}
 
 TEST(Cli, DefaultsWithoutArgs) {
     clear_honeypot_env();

@@ -19,4 +19,4 @@ private:
     int fd_;
 };
 
-}  // namespace honeypot
+}

@@ -93,4 +93,4 @@ bool is_scanner_ip(const std::string& ip_str) {
     return false;
 }
 
-}  // namespace honeypot
+}

@@ -24,4 +24,4 @@ struct SessionEntry {
 void create_session_file(const std::string& filepath, const SessionHeader& header);
 void write_session_entry(const std::string& filepath, const SessionEntry& entry);
 
-}  // namespace honeypot
+}

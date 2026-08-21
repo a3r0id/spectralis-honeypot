@@ -14,4 +14,4 @@ std::string ip_and_mask_to_cidr(const std::string& ip_str, const std::string& ma
 bool ip_in_cidr(const std::string& ip_str, const std::string& cidr);
 bool is_scanner_ip(const std::string& ip_str);
 
-}  // namespace honeypot
+}

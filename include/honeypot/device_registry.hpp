@@ -31,4 +31,4 @@ private:
 void ensure_builtin_devices();
 void print_device_list(std::ostream& out);
 
-}  // namespace honeypot
+}

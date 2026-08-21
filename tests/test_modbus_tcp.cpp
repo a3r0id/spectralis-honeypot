@@ -21,7 +21,7 @@ const std::vector<uint8_t> kReadHolding = {
     0x01, 0x03, 0x00, 0x00, 0x00, 0x02,
 };
 
-}  // namespace
+}
 
 TEST(ModbusTcp, FramesCompleteRequest) {
     auto p = proto();

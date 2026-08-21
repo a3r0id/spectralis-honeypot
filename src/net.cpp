@@ -35,4 +35,4 @@ bool resolve_bind_address(const std::string& spec, in_addr& out) {
     return found;
 }
 
-}  // namespace honeypot
+}

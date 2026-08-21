@@ -23,4 +23,4 @@ const std::vector<std::string>& scanner_ip_ranges() {
     return ranges;
 }
 
-}  // namespace honeypot
+}

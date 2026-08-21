@@ -22,4 +22,4 @@ void handle_client(std::unique_ptr<UniqueSocket> client_sock,
                    std::shared_ptr<ProtocolHandler> protocol,
                    const std::string& session_file);
 
-}  // namespace honeypot
+}

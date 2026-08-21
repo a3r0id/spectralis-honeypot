@@ -16,4 +16,4 @@ struct Args {
 void print_usage();
 Args parse_args(int argc, char** argv);
 
-}  // namespace honeypot
+}

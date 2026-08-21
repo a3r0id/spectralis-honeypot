@@ -32,10 +32,10 @@ public:
     }
 };
 
-}  // namespace
+}
 
 std::shared_ptr<ProtocolHandler> make_s7comm_protocol() {
     return std::make_shared<S7commProtocol>();
 }
 
-}  // namespace honeypot
+}

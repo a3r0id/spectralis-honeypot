@@ -28,4 +28,4 @@ public:
     virtual std::vector<uint8_t> handle(const uint8_t* data, size_t len) const = 0;
 };
 
-}  // namespace honeypot
+}

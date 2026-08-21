@@ -32,7 +32,7 @@ void log_payload(const std::string& session_file,
     });
 }
 
-}  // namespace
+}
 
 std::string to_hex(const uint8_t* data, size_t len) {
     std::ostringstream oss;
@@ -126,4 +126,4 @@ void handle_client(std::unique_ptr<UniqueSocket> client_sock,
     }
 }
 
-}  // namespace honeypot
+}
