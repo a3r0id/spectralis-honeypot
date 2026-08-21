@@ -4,10 +4,6 @@ Modular industrial PLC honeypot. It listens on a TCP port, pretends to be a Siem
 
 More mock devices coming soon™.
 
-**Repo:** [github.com/a3r0id/spectralis-honeypot](https://github.com/a3r0id/spectralis-honeypot)
-
-> Use only on systems and networks you own or have explicit permission to monitor. This is a research / defensive tool, not a toy to drop on someone else’s LAN.
-
 ---
 
 ## What it does
@@ -175,4 +171,4 @@ A VS Code / Cursor [devcontainer](.devcontainer/) is included for a ready Linux 
 
 ## License
 
-[MIT](LICENSE) © 2026 hostinfodev
+[MIT](LICENSE) © 2026 a3r0id
